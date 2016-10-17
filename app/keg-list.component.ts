@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component ({
-  selector: "list-keg",
+  selector: "list-kegs",
   template:`
   <div>list-keg</div>
   `
 })
 
-export class listKegComponent {
-  
+export class ListKegComponent {
+
 }
