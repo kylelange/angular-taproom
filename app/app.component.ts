@@ -4,7 +4,10 @@ import { Component } from '@angular/core';
   selector: 'my-app',
   template: `
   <div class="container">
-    <h1>My First Angular 2 App</h1>
+    <h1>Chipped Flagon TapRoom</h1>
+    <list-kegs></list-kegs>
+    <add-keg></add-keg>
+    <edit-keg></edit-keg>
   </div>
   `
 })
