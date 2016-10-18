@@ -7,13 +7,13 @@ import { Keg } from './keg.model';
   <div>
     <h3>New Keg:</h3>
     <label>Enter Keg Name: </label>
-    <input #newName>
+    <input required #newName>
     <label>Enter Keg Brand: </label>
-    <input #newBrand>
+    <input required #newBrand>
     <label>Enter Pint Price: </label>
-    <input #newPrice>
+    <input required #newPrice>
     <label>Enter Keg ABV: </label>
-    <input #newABV>
+    <input required #newABV>
     <button (click)="
       addClicked(newName.value, newBrand.value, newPrice.value, newABV.value);
       newName.value='';
