@@ -1,3 +1,9 @@
+$dark: #29110e; //super dark brown
+$heavy: #573C13; // mdeium brown
+$light: #B2956A; // light gold
+$normal: #8D7249; // gold
+$background: #faf3eb; // pale beige
+
 html {
   height: 100%;
 }
@@ -9,29 +15,29 @@ body {
 }
 
 h1 {
-  color: #29110e;
+  color: $dark;
   font-family: 'Ruslan Display', cursive;
   text-align: center;
   text-shadow: 2px 3px 10px rgba(0, 0, 0, .75);
-  font-size: 4em;
+  font-size: 5em;
   line-height: 2;
 }
 
 h3 {
-  color: #8D7249;
+  color: $normal;
   font-family: 'Ruslan Display', cursive;
+  font-size: 2.5em;
   text-shadow: 1px 2px 5px rgba(0, 0, 0, .5);
 }
 
 img {
   float: left;
   width: 94px;
-
   margin-right: 10px;
 }
 
 .container {
-  background: #faf3eb;
+  background: $background;
   padding: 25px;
   border-radius: 5px;
   margin-top: 50px;
@@ -39,9 +45,28 @@ img {
 }
 
 .heavy {
-  color: #573C13;
+  color: $heavy;
 }
 
 .light {
-  color: #B2956A;
+  color: $light;
+}
+
+.filter {
+  font-size: 1.2em;
+}
+
+.btn {
+  background-color: $normal;
+  color: $background;
+}
+
+.btn:hover {
+  background-color: $light;
+  color: $background;
+}
+
+.btn:active {
+  background-color: $dark;
+  color: $background;
 }

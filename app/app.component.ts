@@ -7,14 +7,15 @@ import { Keg } from './keg.model';
   <div class="container">
     <h1>Chipped Flagon Tavern</h1>
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-8">
         <list-kegs
           [childKegList] = "masterKegList"
           (clickedKeg)="showDetails($event)"
         ></list-kegs>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-4">
         <add-keg
+          [childSelectedKeg]="selectedKeg"
           (newKegSender) = "addKeg($event)"
         ></add-keg>
         <edit-keg
