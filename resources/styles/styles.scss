@@ -23,10 +23,25 @@ h3 {
   text-shadow: 1px 2px 5px rgba(0, 0, 0, .5);
 }
 
+img {
+  float: left;
+  width: 94px;
+
+  margin-right: 10px;
+}
+
 .container {
   background: #faf3eb;
   padding: 25px;
   border-radius: 5px;
   margin-top: 50px;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, .75);
+}
+
+.heavy {
+  color: #573C13;
+}
+
+.light {
+  color: #B2956A;
 }

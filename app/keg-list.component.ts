@@ -9,7 +9,10 @@ import { Keg } from './keg.model';
     <option value = "is Empty">Show Empty Kegs</option>
   </select>
   <div *ngFor="let currentKeg of childKegList | emptiness:selectedEmptiness">
-    <h3 (click)="selectKeg(currentKeg)">{{ currentKeg.brand }}: {{ currentKeg.pints }}</h3>
+    <img *ngIf="currentKeg.price<4.50" src="build/images/cheap.png" />
+    <img *ngIf="currentKeg.price>6.50" src="build/images/premium.png" />
+    <h3 *ngIf="currentKeg.abv>0.05" (click)="selectKeg(currentKeg)" class="heavy">{{ currentKeg.brand }}: {{ currentKeg.pints }}</h3>
+    <h3 *ngIf="currentKeg.abv<0.05" (click)="selectKeg(currentKeg)" class="light">{{ currentKeg.brand }}: {{ currentKeg.pints }}</h3>
     <h4>{{ currentKeg.name }} ({{ currentKeg.abv }}) ...$ {{ currentKeg.price }}</h4>
     <p (click)="currentKeg.dispensePint()">Dispense Pint</p>
   </div>

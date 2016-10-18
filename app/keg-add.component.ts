@@ -7,13 +7,13 @@ import { Keg } from './keg.model';
   <div>
     <h3>New Keg:</h3>
     <label>Enter Keg Name: </label>
-    <input required #newName>
+    <input #newName>
     <label>Enter Keg Brand: </label>
-    <input required #newBrand>
+    <input #newBrand>
     <label>Enter Pint Price: </label>
-    <input required #newPrice>
+    <input #newPrice>
     <label>Enter Keg ABV: </label>
-    <input required #newABV>
+    <input #newABV>
     <button (click)="
       addClicked(newName.value, newBrand.value, newPrice.value, newABV.value);
       newName.value='';
@@ -28,7 +28,11 @@ import { Keg } from './keg.model';
 export class AddKegComponent {
   @Output() newKegSender = new EventEmitter();
   addClicked(name: string, brand: string, price: number, abv: number){
-    var newKegToAdd: Keg = new Keg(name, brand, price, abv);
-    this.newKegSender.emit(newKegToAdd);
+    if((name!=='')&&(brand!=='')&&(price>0)&&(abv>0)) {
+      var newKegToAdd: Keg = new Keg(name, brand, price, abv);
+      this.newKegSender.emit(newKegToAdd);
+    } else {
+      alert("You need to fill in all blanks to tap a keg, sober up and try again!");
+    }
   }
 }
