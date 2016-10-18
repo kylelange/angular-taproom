@@ -1,6 +1,32 @@
-body {
-  background: tan;
+html {
+  height: 100%;
 }
+
+body {
+  height: 100%;
+  background: beige url("./../images/woodgrain.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
 h1 {
-  color: brown;
+  color: #29110e;
+  font-family: 'Ruslan Display', cursive;
+  text-align: center;
+  text-shadow: 2px 3px 10px rgba(0, 0, 0, .75);
+  font-size: 4em;
+  line-height: 2;
+}
+
+h3 {
+  color: #8D7249;
+  font-family: 'Ruslan Display', cursive;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, .5);
+}
+
+.container {
+  background: #faf3eb;
+  padding: 25px;
+  border-radius: 5px;
+  margin-top: 50px;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, .75);
 }

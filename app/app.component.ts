@@ -6,11 +6,17 @@ import { Keg } from './keg.model';
   template: `
   <div class="container">
     <h1>Chipped Flagon Tavern</h1>
-    <list-kegs
-      [childKegList] = "masterKegList"
-    ></list-kegs>
-    <add-keg></add-keg>
-    <edit-keg></edit-keg>
+    <div class="row">
+      <div class="col-sm-6">
+        <list-kegs
+          [childKegList] = "masterKegList"
+        ></list-kegs>
+      </div>
+      <div class="col-sm-6">
+        <add-keg></add-keg>
+        <edit-keg></edit-keg>
+      </div>
+    </div>
   </div>
   `
 })
