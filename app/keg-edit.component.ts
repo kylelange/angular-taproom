@@ -16,11 +16,11 @@ import { Keg } from './keg.model';
     </div>
     <div class="form-group">
       <label>Edit Pint Price: </label>
-      <input [(ngModel)]="childSelectedKeg.price" class="form-control">
+      <input [(ngModel)]="childSelectedKeg.price" class="form-control" type="number" min="0">
     </div>
     <div class="form-group">
       <label>Edit Keg ABV: </label>
-      <input [(ngModel)]="childSelectedKeg.abv" class="form-control">
+      <input [(ngModel)]="childSelectedKeg.abv" class="form-control" type="number">
     </div>
     <button (click)="updateClicked()" class="btn form-control">Update Keg</button>
   </div>
