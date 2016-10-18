@@ -10,11 +10,17 @@ import { Keg } from './keg.model';
       <div class="col-sm-6">
         <list-kegs
           [childKegList] = "masterKegList"
+          (clickedKeg)="showDetails($event)"
         ></list-kegs>
       </div>
       <div class="col-sm-6">
-        <add-keg></add-keg>
-        <edit-keg></edit-keg>
+        <add-keg
+          (newKegSender) = "addKeg($event)"
+        ></add-keg>
+        <edit-keg
+          [childSelectedKeg]="selectedKeg"
+          (newKegEditor)="finishedUpdate()"
+        ></edit-keg>
       </div>
     </div>
   </div>
@@ -29,4 +35,14 @@ export class AppComponent {
     new Keg("Bigfoot: Barleywine", "Sierra Navada", 7.25, .096),
     new Keg("Pabst Blue Ribbon", "Pabst Brewing Co.", .95, .0474)
   ];
+  addKeg(newKegFromChild: Keg) {
+    this.masterKegList.push(newKegFromChild);
+  }
+  selectedKeg: Keg = null;
+  showDetails(clickedKeg: Keg) {
+    this.selectedKeg = clickedKeg;
+  }
+  finishedUpdate() {
+    this.selectedKeg = null;
+  }
 }
